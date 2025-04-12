@@ -1,8 +1,10 @@
+import MainLayout from "../layouts/MainLayout";
+
 export default function Albums() {
     return (
-      <div>
+      <MainLayout>
         <h1>Albums</h1>
         <p>Explore the latest albums here!</p>
-      </div>
+      </MainLayout>
     );
   }
