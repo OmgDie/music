@@ -1,6 +1,7 @@
 import { ITrack } from '@/types/track';
 import { Delete, Pause, PlayArrow } from '@mui/icons-material';
 import { Card, Grid, IconButton, } from '@mui/material';
+import Link from 'next/link';
 import React from 'react';
 
 interface ITrackItemProps {
@@ -26,7 +27,9 @@ const TrackItem: React.FC<ITrackItemProps> = ({track, active = false}) => {
                 </IconButton>
                 <img src={track.picture} alt={track.name} style={{ width: '100px', height: '100px' }} />
                 <Grid container direction='column' style={{ width: 200, margin: '0, 20px'}}>
-                    <div>{track.name}</div>
+                    <Link href={`/tracks/${track._id}`} style={{ textDecoration: 'none', color: 'black' }}>
+                        <div style={{ fontSize: 20, fontWeight: 'bold' }}>{track.name}</div>
+                    </Link>
                     <div style={{fontSize: 12, color: 'blue'}}>{track.artist}</div>
                 </Grid>
                 {active && <div>02:42 / 03:20</div>}

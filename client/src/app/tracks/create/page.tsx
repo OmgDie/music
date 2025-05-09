@@ -1,10 +1,8 @@
-import MainLayout from '@/app/layout';
 import { Button, Card, Grid } from '@mui/material';
 import React from 'react';
 
 const createTrack = () => {
     return (
-        <MainLayout>
             <Grid container justifyContent={'center'}>
                 <Card >
                     <Grid container justifyContent={'space-between'} alignItems='center' padding={2}>
@@ -13,7 +11,6 @@ const createTrack = () => {
                     </Grid>
                 </Card>
             </Grid>
-        </MainLayout>
     );
 };
 
